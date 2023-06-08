@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI CHECKER</title>
+    
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+        <!--Stylesheet-->
+        <style media="screen">
+          *,
+    *:before,
+    *:after{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: #e0c7c8;
+    }
+  
+    </style>
+    
+    
+    </head>
+<body>
+    <h1>BMI CHECKER</h1>
+    <br><h3>Your BMI index is {{value}}. And you are 
+    {{what}} as per BMI.</h3>
+    <br>    
+    <br>     <h2><B1> BMI CATEGORIES:</B1></h2>
+    <br>     Underweight = 0.00 - 18.5
+    <br>     Normal weight = 18.5 - 24.9
+    <br>     Overweight = 25 - 29.9
+    <br>     Obesity = BMI of 30 or greater<br>
+    <br>
+    <p>
+        <h3></h3>You can also share your bmi result.</h3><br>
+        <br>click share my data to save your test result.
+        <br>If you do not want to save your data and go back to your User Profile then click Check Again.
+        <br>If you want to convert height from inches to centi meter then click Height calculations.<br><br><br>
+    </p>
+    <a href="{% url 'base' %}" >Share My Data</a>
+    <br><br>
+    <a href="{% url 'home' %}" >Again Check BMI(Body Mass Index)</a>
+    <br><br>
+    <a href="{% url 'index' %}" >Height calculations</a>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Stylesheet-->
+    <style media="screen">
+        *,
+  *:before,
+  *:after{
+      padding: 0;
+      margin: 0;
+  }
+  body{
+      background-color: #e0c7c8;
+  }
+
+label{
+  display: block;
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+input{
+  display: block;
+  height: 40px;
+  width: 10%;
+  background-color: rgba(157, 157, 176, 0.89);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+button{
+  margin-top: 10px;
+  width: 10%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+  </style>
+  </style>
+</head>
+<body>
+    <br><h1>Height Convertion</h1><br>
+    <form action='/process1' method='get'>
+        <label>Your Height(in inches):</label>
+        <input type="text" id="heightinch" name="heightinch"><br>
+        <button type='submit'>Convert</button><br><br><br>
+    </form><br><br>
+    <a href="{% url 'home' %}" >Check BMI</a>
+</body>
+</html>

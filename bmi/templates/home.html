@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CHECKER</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #40849a;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+
+form{
+    height: 300px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 40%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+label{
+    display: block;
+    margin-top: -10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(157, 157, 176, 0.89);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #000000;
+}
+button{
+    margin-top: 10px;
+    width: 40%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+form1{
+    height: 200px;
+    width: 300px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 70%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form1 *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+label{
+    display: block;
+    margin-top: -10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(157, 157, 176, 0.89);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #000000;
+}
+button1{
+    margin-top: 40px;
+    width: 20%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+    <h1>BMI CHECKER</h1>
+    <br>
+    <h2>Calculate your Body Mass Index (BMI)</h2>
+    <br><br>Body mass index (BMI) is a measure of fat based on height and weight that applies to adult men and women.<br><br>
+    <h3>BMI Calculating Procedure<br></h3>
+    Enter your weight and height using standard measures.<br>
+    Then click Calculate BMI and see your BMI result.<br><br>
+    <h3>Height conversion Procedure<br></h3>
+    Convert your height from feet-inches to inches.<br>
+    Your Height in cm = (Your height in inches * 2.54)<br>
+    <br><br><h4>To exit BMI Checker Click Logout.</h4><br>
+    <a href="{% url 'login' %}" >Logout</a><br>
+
+    <form action='/process' method='get'>
+        <label>Your Weight(in kg):</label>
+        <input type="text" id="weight" name="weight"><br>
+        <label>Your Height(in cm):</label>
+        <input type="text" id="height" name="height"><br>
+        <button type='submit'>Calculate BMI</button>
+    </form>
+    
+    <br><br>
+    <!---
+    <form1 action='/process' method='get'>
+        <label>Your Height(in inches):</label>
+        <input type="text" id="height" name="height1"><br>
+        <button1 type='submit'>Convert</button1><br><br><br>
+    </form1><br>
+    --->
+
+    <br>
+
+    <br><br>
+
+
+</body>
+</html>
